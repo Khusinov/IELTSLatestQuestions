@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "782208360409",
+    "project_id": "ieltslatestquestions-e0562",
+    "storage_bucket": "ieltslatestquestions-e0562.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782208360409:android:30a37b90990f80faf003c8",
+        "android_client_info": {
+          "package_name": "uz.khusinov.ieltslatestquestions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782208360409-gkpup1c87f2204fkq49mp6qdrl536t45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBBda1hevbkSoxXbnNkmY88FAw0oEliQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782208360409-gkpup1c87f2204fkq49mp6qdrl536t45.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
