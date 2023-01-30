@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".AdminPanel">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Admin panel"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/question_type_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Question type"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/day_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Day"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/month_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Month"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/year_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Year"
+
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/question_add"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:hint="Question"
+        android:inputType="text" />
+
+    <ImageView
+        android:id="@+id/image_add"
+        android:layout_width="180dp"
+        android:background="@color/common_google_signin_btn_text_light_disabled"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_margin="2dp" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginEnd="15dp"
+        android:text="add" />
+
+
+</LinearLayout>
