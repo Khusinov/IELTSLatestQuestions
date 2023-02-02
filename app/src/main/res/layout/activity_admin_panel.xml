@@ -20,7 +20,7 @@
         android:id="@+id/question_type_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:hint="Question type"
         android:inputType="number" />
 
@@ -28,7 +28,7 @@
         android:id="@+id/day_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:hint="Day"
         android:inputType="number" />
 
@@ -36,7 +36,7 @@
         android:id="@+id/month_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:hint="Month"
         android:inputType="number" />
 
@@ -44,18 +44,32 @@
         android:id="@+id/year_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:hint="Year"
-
         android:inputType="number" />
 
     <EditText
         android:id="@+id/question_add"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:hint="Question"
         android:inputType="text" />
+
+    <Button
+        android:id="@+id/buttonLoadPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:text="Select Picture" />
+    <Button
+        android:id="@+id/buttonUploadPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:text="Upload Picture" />
 
     <ImageView
         android:id="@+id/image_add"
@@ -71,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginEnd="15dp"
-        android:text="add" />
+        android:text="add all" />
 
 
 </LinearLayout>

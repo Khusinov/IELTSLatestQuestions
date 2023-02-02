@@ -2,6 +2,7 @@ package uz.khusinov.ieltslatestquestions
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -9,6 +10,8 @@ import uz.khusinov.ieltslatestquestions.databinding.ActivityAdminPanelBinding
 import uz.khusinov.ieltslatestquestions.model.Question
 
 class AdminPanel : AppCompatActivity() {
+    private  val TAG = "AdminPanel"
+
     lateinit var binding: ActivityAdminPanelBinding
     val db = Firebase.firestore
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +37,8 @@ class AdminPanel : AppCompatActivity() {
             question.questionBody = questionBody
             question.imageUrl = imageUrl
 
+            Log.d(TAG, "onCreate: clicked")
+            Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show()
 
             db.collection("Question")
                 .add(question)
