@@ -1,4 +1,4 @@
-package uz.khusinov.ieltslatestquestions
+package uz.khusinov.ieltswritingquestions
 
 import org.junit.Test
 

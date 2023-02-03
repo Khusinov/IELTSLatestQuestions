@@ -1,4 +1,4 @@
-package uz.khusinov.ieltslatestquestions
+package uz.khusinov.ieltswritingquestions
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

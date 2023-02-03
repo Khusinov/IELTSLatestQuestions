@@ -1,4 +1,4 @@
-package uz.khusinov.ieltslatestquestions.model
+package uz.khusinov.ieltswritingquestions.model
 
 data class Question(
     var day:Int = 0,

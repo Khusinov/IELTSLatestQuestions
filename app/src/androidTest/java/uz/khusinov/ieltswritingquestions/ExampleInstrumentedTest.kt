@@ -1,4 +1,4 @@
-package uz.khusinov.ieltslatestquestions
+package uz.khusinov.ieltswritingquestions
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

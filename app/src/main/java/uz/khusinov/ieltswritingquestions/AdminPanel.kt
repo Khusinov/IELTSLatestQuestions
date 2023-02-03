@@ -1,8 +1,7 @@
-package uz.khusinov.ieltslatestquestions
+package uz.khusinov.ieltswritingquestions
 
 
 import android.Manifest
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -18,8 +17,8 @@ import com.karumi.dexter.listener.PermissionDeniedResponse
 import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
-import uz.khusinov.ieltslatestquestions.databinding.ActivityAdminPanelBinding
-import uz.khusinov.ieltslatestquestions.model.Question
+import uz.khusinov.ieltswritingquestions.databinding.ActivityAdminPanelBinding
+import uz.khusinov.ieltswritingquestions.model.Question
 
 
 class AdminPanel : AppCompatActivity() {
