@@ -1,7 +1,6 @@
 package uz.khusinov.ieltslatestquestions.model
 
 data class Question(
-    var id:String = "",
     var day:Int = 0,
     var month:Int = 0,
     var year:Int = 0,
