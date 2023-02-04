@@ -62,10 +62,10 @@ class AdminPanel : AppCompatActivity() {
 
 
         binding.addButton.setOnClickListener {
-            val day = binding.dayAdd.text.toString().toInt()
-            val month = binding.monthAdd.text.toString().toInt()
-            val year = binding.yearAdd.text.toString().toInt()
-            val type = binding.questionTypeAdd.text.toString().toInt()
+            val day = binding.dayAdd.text.toString()
+            val month = binding.monthAdd.text.toString()
+            val year = binding.yearAdd.text.toString()
+            val type = binding.questionTypeAdd.text.toString()
             val imageUrl = imageUri
             val questionBody = binding.questionAdd.text.toString()
 

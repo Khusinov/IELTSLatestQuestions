@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">IELTSLatestQuestions</string>
+    <string name="app_name">IELTS Writing Questions</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -9,4 +9,9 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- to toggle the open close button of the navigation drawer -->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="image_downloading">Image downloading...</string>
 </resources>

@@ -4,29 +4,22 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import uz.khusinov.ieltswritingquestions.adapter.Task1Adapter
-import uz.khusinov.ieltswritingquestions.databinding.ActivityMainBinding
+import uz.khusinov.ieltswritingquestions.adapter.Task2Adapter
+import uz.khusinov.ieltswritingquestions.databinding.ActivityTaskTwoBinding
 import uz.khusinov.ieltswritingquestions.model.Question
 
-class MainActivity : AppCompatActivity() {
-
-    lateinit var binding: ActivityMainBinding
-    private val TAG = "MainActivity"
-
+class TaskTwo : AppCompatActivity() {
+    lateinit var binding: ActivityTaskTwoBinding
     val db = Firebase.firestore
+    private val TAG = "TaskTwo"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityTaskTwoBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
         supportActionBar?.hide()
 
         binding.backIc.setOnClickListener {
@@ -34,7 +27,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
         val list = ArrayList<Question>()
 
 
@@ -47,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                     val question = Question()
                     Log.d(TAG, "${document.id} => ${document.data}")
 
-                    if (document.data["type"].toString() == "1") {
+                    if (document.data["type"].toString() == "2") {
 
                         question.day = document.data["day"].toString()
                         question.month = document.data["month"].toString()
@@ -63,6 +55,7 @@ class MainActivity : AppCompatActivity() {
 
 
                 }
+                // list [day , month, year ,questionBody , ...]
 
                 Log.d(TAG, "Unsorted list $list")
 
@@ -72,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 
                 val recyclerView = binding.recyclerview
                 recyclerView.layoutManager = LinearLayoutManager(this)
-                val adapter = Task1Adapter(sortedList)
+                val adapter = Task2Adapter(sortedList)
                 recyclerView.adapter = adapter
 
             }
@@ -82,5 +75,4 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
 }

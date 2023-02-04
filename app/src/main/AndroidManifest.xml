@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="uz.khusinov.ieltswritingquestions">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -16,12 +17,13 @@
         android:theme="@style/Theme.IELTSLatestQuestions"
         tools:targetApi="31">
         <activity
-            android:name=".AdminPanel"
-            android:exported="false" >
-
-        </activity>
+            android:name=".QuestionImage"
+            android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".TaskTwo"
+            android:exported="false" />
+        <activity
+            android:name=".AdminPanel"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
@@ -35,12 +37,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" /> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
     </application>
 
 </manifest>

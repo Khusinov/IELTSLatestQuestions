@@ -24,7 +24,7 @@ class WelcomeActivity : AppCompatActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, 2000)
 
     }
 }
