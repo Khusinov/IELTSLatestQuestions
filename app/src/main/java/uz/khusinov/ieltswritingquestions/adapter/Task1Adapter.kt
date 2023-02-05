@@ -54,6 +54,7 @@ class Task1Adapter(val question: List<Question>) :
         holder.binding.root.setOnClickListener {
             val intent = Intent(it.context, QuestionImage::class.java)
             intent.putExtra("ImageUrl", imageUrl)
+            intent.putExtra("QuestionNumber", "${position+1}")
             intent.putExtra("QuestionBody", question[position].questionBody)
             Log.d(TAG, "onBindViewHolder: $imageUrl")
             startActivity(it.context, intent, null)

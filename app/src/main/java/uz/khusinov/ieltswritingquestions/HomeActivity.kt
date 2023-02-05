@@ -1,6 +1,8 @@
 package uz.khusinov.ieltswritingquestions
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -16,6 +18,8 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        val colorDrawable = ColorDrawable(Color.parseColor("#FF018786"))
+        supportActionBar?.setBackgroundDrawable(colorDrawable)
 
         binding.task1.setOnClickListener {
             var intent = Intent(this, MainActivity::class.java)
@@ -23,6 +27,10 @@ class HomeActivity : AppCompatActivity() {
         }
         binding.task2.setOnClickListener {
             var intent = Intent(this, TaskTwo::class.java)
+            startActivity(intent)
+        }
+        binding.tips.setOnClickListener {
+            var intent = Intent(this, TipsActivity::class.java)
             startActivity(intent)
         }
 
