@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#97CAB2"
-    tools:context=".TaskTwo">
+    tools:context=".ui.TaskTwo">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/profileToolbar"

@@ -1,4 +1,4 @@
-package uz.khusinov.ieltswritingquestions
+package uz.khusinov.ieltswritingquestions.ui
 
 import android.app.AlertDialog
 import android.content.Context
@@ -17,18 +17,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import uz.khusinov.ieltswritingquestions.adapter.Task1Adapter
-import uz.khusinov.ieltswritingquestions.adapter.Task2Adapter
-import uz.khusinov.ieltswritingquestions.databinding.ActivityTaskTwoBinding
+import uz.khusinov.ieltswritingquestions.databinding.ActivityMainBinding
 import uz.khusinov.ieltswritingquestions.model.Question
 
-class TaskTwo : AppCompatActivity() {
-    lateinit var binding: ActivityTaskTwoBinding
+class MainActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivityMainBinding
+    private val TAG = "MainActivity"
+
     val db = Firebase.firestore
-    private val TAG = "TaskTwo"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityTaskTwoBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
         supportActionBar?.hide()
 
         binding.backIc.setOnClickListener {
@@ -36,6 +39,7 @@ class TaskTwo : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
         val list = ArrayList<Question>()
 
 
@@ -88,6 +92,9 @@ class TaskTwo : AppCompatActivity() {
 
         val dialog = setProgressDialog(this, "Downloading..")
         dialog.show()
+//            val mProgressDialog = ProgressDialog(this)
+//            mProgressDialog.setTitle("Downloading...")
+//            mProgressDialog.show()
 
 
         db.collection("Question")
@@ -97,7 +104,7 @@ class TaskTwo : AppCompatActivity() {
                     val question = Question()
                     Log.d(TAG, "${document.id} => ${document.data}")
 
-                    if (document.data["type"].toString() == "2") {
+                    if (document.data["type"].toString() == "1") {
 
                         question.day = document.data["day"].toString()
                         question.month = document.data["month"].toString()
@@ -114,7 +121,6 @@ class TaskTwo : AppCompatActivity() {
 
                 }
                 dialog.hide()
-                // list [day , month, year ,questionBody , ...]
 
                 Log.d(TAG, "Unsorted list $list")
 
@@ -124,7 +130,7 @@ class TaskTwo : AppCompatActivity() {
 
                 val recyclerView = binding.recyclerview
                 recyclerView.layoutManager = LinearLayoutManager(this)
-                val adapter = Task2Adapter(sortedList)
+                val adapter = Task1Adapter(sortedList)
                 recyclerView.adapter = adapter
 
             }
@@ -134,4 +140,5 @@ class TaskTwo : AppCompatActivity() {
 
 
     }
+
 }

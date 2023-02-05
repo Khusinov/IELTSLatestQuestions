@@ -7,7 +7,7 @@
     android:background="@color/teal_700"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".TipsActivity">
+    tools:context=".ui.TipsActivity">
 
     <ScrollView
         android:layout_width="match_parent"

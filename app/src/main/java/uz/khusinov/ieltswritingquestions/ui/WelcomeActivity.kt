@@ -1,4 +1,4 @@
-package uz.khusinov.ieltswritingquestions
+package uz.khusinov.ieltswritingquestions.ui
 
 import android.content.Intent
 import android.os.Bundle

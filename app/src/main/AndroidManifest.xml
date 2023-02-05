@@ -17,22 +17,22 @@
         android:theme="@style/Theme.IELTSLatestQuestions"
         tools:targetApi="31">
         <activity
-            android:name=".TipsActivity"
+            android:name=".ui.TipsActivity"
             android:exported="false" />
         <activity
-            android:name=".QuestionImage"
+            android:name=".ui.QuestionImage"
             android:exported="false" />
         <activity
-            android:name=".TaskTwo"
+            android:name=".ui.TaskTwo"
             android:exported="false" />
         <activity
-            android:name=".AdminPanel"
+            android:name=".ui.AdminPanel"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".ui.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".ui.WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="false" /> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
