@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.squareup.picasso.Picasso
 import uz.khusinov.ieltswritingquestions.databinding.ActivityQuestionImageBinding
@@ -29,11 +30,13 @@ class QuestionImage : AppCompatActivity() {
 
         Log.d(TAG, "onCreate: $imageUrl")
 
-        if (imageUrl == null) {
+        if (imageUrl == null || imageUrl == "") {
             binding.textview.text = "Image is not available"
+            binding.downloadImage.visibility = View.INVISIBLE
         } else {
             binding.textview.text = questionBody
             Picasso.get().load(imageUrl).into(binding.imageView)
+
         }
 
         binding.downloadImage.setOnClickListener {

@@ -14,6 +14,7 @@ import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.ads.*
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import uz.khusinov.ieltswritingquestions.adapter.Task2Adapter
@@ -38,7 +39,7 @@ class TaskTwo : AppCompatActivity() {
         val list = ArrayList<Question>()
 
 
-        fun setProgressDialog(context: Context, message:String): AlertDialog {
+        fun setProgressDialog(context: Context, message: String): AlertDialog {
             val llPadding = 30
             val ll = LinearLayout(context)
             ll.orientation = LinearLayout.HORIZONTAL
@@ -47,7 +48,8 @@ class TaskTwo : AppCompatActivity() {
             ll.setBackgroundColor(Color.parseColor("#FFFFFFFF"))
             var llParam = LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT)
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            )
             llParam.gravity = Gravity.CENTER
             ll.layoutParams = llParam
 
@@ -58,7 +60,8 @@ class TaskTwo : AppCompatActivity() {
 
             llParam = LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT)
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
             llParam.gravity = Gravity.CENTER
             val tvText = TextView(context)
             tvText.text = message
@@ -113,6 +116,7 @@ class TaskTwo : AppCompatActivity() {
 
                 }
                 dialog.hide()
+                dialog.dismiss()
                 // list [day , month, year ,questionBody , ...]
 
                 Log.d(TAG, "Unsorted list $list")
@@ -126,11 +130,50 @@ class TaskTwo : AppCompatActivity() {
                 val adapter = Task2Adapter(sortedList)
                 recyclerView.adapter = adapter
 
+                admob()
+
             }
             .addOnFailureListener { exception ->
                 Log.w(TAG, "Error getting documents.", exception)
             }
 
 
+    }
+
+    private fun admob() {
+
+            MobileAds.initialize(this) {}
+            val mAdView: AdView = binding.adView
+
+            val adRequest = AdRequest.Builder().build()
+            binding.adView.loadAd(adRequest)
+
+            mAdView.adListener = object : AdListener() {
+
+                override fun onAdClicked() {
+                    Log.d(TAG, "onAdClicked: ")
+                }
+
+                override fun onAdClosed() {
+                    Log.d(TAG, "onAdClosed: ")
+                }
+
+                override fun onAdFailedToLoad(adError: LoadAdError) {
+                    Log.d(TAG, "onAdFailedToLoad: ")
+                }
+
+                override fun onAdImpression() {
+                    Log.d(TAG, "onAdImpression: ")
+                }
+
+                override fun onAdLoaded() {
+                    Log.d(TAG, "onAdLoaded: ")
+                }
+
+                override fun onAdOpened() {
+                    Log.d(TAG, "onAdOpened: ")
+                }
+
+        }
     }
 }
