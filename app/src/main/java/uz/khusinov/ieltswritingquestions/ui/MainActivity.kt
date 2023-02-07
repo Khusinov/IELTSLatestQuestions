@@ -121,11 +121,8 @@ class MainActivity : AppCompatActivity() {
                 dialog.hide()
                 dialog.dismiss()
 
-                Log.d(TAG, "Unsorted list $list")
-
                 val sortedList = list.sortedByDescending { it.sortKey }
 
-                Log.d(TAG, "Sorted list: $sortedList")
 
                 val recyclerView = binding.recyclerview
                 recyclerView.layoutManager = LinearLayoutManager(this)

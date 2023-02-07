@@ -14,7 +14,7 @@ import uz.khusinov.ieltswritingquestions.databinding.ActivityQuestionImageBindin
 
 class QuestionImage : AppCompatActivity() {
     lateinit var binding: ActivityQuestionImageBinding
-    private val TAG = "QuestionImage"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuestionImageBinding.inflate(layoutInflater)
@@ -28,7 +28,6 @@ class QuestionImage : AppCompatActivity() {
         supportActionBar?.title = "$questionNumber-question with image"
         supportActionBar?.setBackgroundDrawable(colorDrawable)
 
-        Log.d(TAG, "onCreate: $imageUrl")
 
         if (imageUrl == null || imageUrl == "") {
             binding.textview.text = "Image is not available"

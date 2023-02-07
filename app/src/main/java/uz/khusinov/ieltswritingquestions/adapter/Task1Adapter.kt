@@ -22,7 +22,6 @@ class Task1Adapter(val question: List<Question>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        Log.d(TAG, "onCreateViewHolder: Called adapter")
         return MyViewHolder(
             Recyclerview1ItemBinding.inflate(
                 LayoutInflater.from(parent.context),
@@ -33,7 +32,7 @@ class Task1Adapter(val question: List<Question>) :
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        Log.d(TAG, "onBH: Called adapter")
+
         holder.binding.questionBody.text = question[position].questionBody
         holder.binding.questionNumber.text = "${position + 1}"
         val givenDay =
@@ -41,15 +40,11 @@ class Task1Adapter(val question: List<Question>) :
         holder.binding.givenDate.text = givenDay
         holder.binding.hostName.text = question[position].host
         val imageUrl = question[position].imageUrl
-//        if (imageUrl != null) {
-//            Picasso.get().load(imageUrl).into(holder.binding.image)
-//        } else {
-//            holder.binding.image.visibility = View.GONE
-//        }
+
         holder.binding.root.setOnClickListener {
             val intent = Intent(it.context, QuestionImage::class.java)
             intent.putExtra("ImageUrl", imageUrl)
-            intent.putExtra("QuestionNumber", "${position+1}")
+            intent.putExtra("QuestionNumber", "${position + 1}")
             intent.putExtra("QuestionBody", question[position].questionBody)
             Log.d(TAG, "onBindViewHolder: $imageUrl")
             startActivity(it.context, intent, null)
@@ -57,7 +52,6 @@ class Task1Adapter(val question: List<Question>) :
     }
 
     override fun getItemCount(): Int {
-        Log.d(TAG, "onCreateViewHolder: Called adapter")
         return question.size
 
     }
