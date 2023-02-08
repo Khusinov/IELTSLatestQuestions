@@ -18,6 +18,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
+
+
             android:id="@+id/profileToolbar"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
