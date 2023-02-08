@@ -26,9 +26,6 @@
             android:name=".ui.TaskTwo"
             android:exported="false" />
         <activity
-            android:name=".ui.AdminPanel"
-            android:exported="false" />
-        <activity
             android:name=".ui.HomeActivity"
             android:exported="false" />
         <activity
@@ -45,7 +42,7 @@
             android:exported="false" /> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
+            android:value="ca-app-pub-8982515368836053~1090621166" />
 
     </application>
 

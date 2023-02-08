@@ -35,7 +35,6 @@ class QuestionImage : AppCompatActivity() {
         } else {
             binding.textview.text = questionBody
             Picasso.get().load(imageUrl).into(binding.imageView)
-
         }
 
         binding.downloadImage.setOnClickListener {
