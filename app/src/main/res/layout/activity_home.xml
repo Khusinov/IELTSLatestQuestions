@@ -41,7 +41,7 @@
                 android:layout_gravity="center"
                 android:text="TASK 1"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="32sp"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -63,7 +63,7 @@
                 android:layout_gravity="center"
                 android:text="TASK 2"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="32sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
